@@ -37,6 +37,7 @@ class UserController extends Controller
                 'alpha_dash', ],
             'avatar'=>'file',
             'name'=>'string|required|max:255',
+            'description'=>'string',
             'email'=>
             'string|required|email|max:255',
             // 'Unique:users,username,except,$user->email'
@@ -46,6 +47,9 @@ class UserController extends Controller
 
         if(request('avatar')){
             $validated['avatar'] = request('avatar')->store('avatars');
+        }
+        if(request('banner')){
+            $validated['banner'] = request('banner')->store('banners');
         }
         
         $user->update($validated);

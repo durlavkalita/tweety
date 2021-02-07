@@ -2,7 +2,7 @@
   <header class="mb-6 relative">
     <div class="relative">  
       <img 
-      src="/images/banner.png" 
+      src="{{$user->banner}}" 
       alt="banner" 
       class="rounded-lg"
       />
@@ -10,8 +10,9 @@
       src="{{$user->avatar}}" 
       alt=""
       class="rounded-full mr-2 absolute bottom-0 transform -translate-x-1/2 translate-y-1/2"
-      style="left: 50%"
-      width="125"
+      style="left: 50%; border-radius: 50%;"
+      height="150"
+      width="150"
       />
     </div>
 
@@ -29,7 +30,7 @@
     </div>
 
     <p class="text-sm">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque est dicta facere cumque aliquam, ipsam veniam. Aliquam minima ducimus qui, at cupiditate, exercitationem ipsam modi obcaecati atque libero voluptatem dignissimos, nesciunt quibusdam necessitatibus iure quia possimus. Voluptate eligendi repellendus aliquid.
+      {{$user->description ? $user->description : 'add description go to edit'}}
     </p>
 
   </header>

@@ -53,6 +53,15 @@
     <div class="mb-6">
       <label 
       class="block mb-2 uppercase font-bold text-xs text-gray-700"
+      for="description">Description</label>
+      <textarea name="description" id="description" class="border border-gray-400 p-2 w-full rounded-lg"></textarea>
+      @error('description')
+        <p class="text-red-500 text-xs mt-2">{{$message}}</p>
+      @enderror
+    </div>
+    <div class="mb-6">
+      <label 
+      class="block mb-2 uppercase font-bold text-xs text-gray-700"
       for="password">Password</label>
       <input
       class="border border-gray-400 p-2 w-full rounded-lg" 
@@ -80,18 +89,31 @@
         <p class="text-red-500 text-xs mt-2">{{$message}}</p>
       @enderror
     </div>
-      <div class="mb-6">
-        <label 
-          class="block mb-2 uppercase font-bold text-xs text-gray-700"
-          for="avatar" 
-          >Avatar</label>
-        <div class="flex">
-          <input type="file" name="avatar" id="avatar">
-          <img src="{{$user->avatar}}" alt="Your avatar" width="40"/>
-        </div>
-        @error('avatar')
-          <p class="text-red-500 text-xs mt-2">{{$message}}</p>
-        @enderror
+    <div class="mb-6">
+      <label 
+        class="block mb-2 uppercase font-bold text-xs text-gray-700"
+        for="avatar" 
+        >Avatar</label>
+      <div class="flex">
+        <input type="file" name="avatar" id="avatar">
+        <img src="{{$user->avatar}}" alt="Your avatar" width="40"/>
+      </div>
+      @error('avatar')
+        <p class="text-red-500 text-xs mt-2">{{$message}}</p>
+      @enderror
+    </div>
+    <div class="mb-6">
+      <label 
+        class="block mb-2 uppercase font-bold text-xs text-gray-700"
+        for="banner" 
+        >Banner</label>
+      <div class="flex">
+        <input type="file" name="banner" id="banner">
+        <img src="{{$user->avatar}}" alt="Your banner" width="40"/>
+      </div>
+      @error('banner')
+        <p class="text-red-500 text-xs mt-2">{{$message}}</p>
+      @enderror
     </div>
     <div class="mb-6">
       <button type="submit" class="border bg-blue-500 text-white px-2 py-1 mr-4 rounded-lg">Submit</button>

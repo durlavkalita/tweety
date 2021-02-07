@@ -23,7 +23,9 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-        'avatar'
+        'description',
+        'avatar',
+        'banner'
     ];
 
     /**
@@ -50,6 +52,13 @@ class User extends Authenticatable
         return asset($value ? 'storage/'.$value : 'images/banner.png');
         // return "https://i.pravatar.cc/150?u=".$this->email;
     }
+
+    public function getBannerAttribute($value)
+    {
+        return asset($value ? 'storage/'.$value : 'images/banner.png');
+        // return "https://i.pravatar.cc/150?u=".$this->email;
+    }
+
     // public function setPasswordAttribute($value)
     // {
     //     $this->validated['password'] = (Hash::needsRehash($value)) ? bcrypt($value) : $value;
