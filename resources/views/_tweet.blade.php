@@ -11,11 +11,26 @@
       </a>
   </div>
   <div>
-      <h5 class="font-bold mb-4">
-        <a href="{{route('users.show', $tweet->user)}}">
-          {{ $tweet->user->name }}
-        </a>
-      </h5>
+      <div class="flex">
+        <div>
+          <h5 class="font-bold mb-4">
+            <a href="{{route('users.show', $tweet->user)}}">
+              {{ $tweet->user->name }}
+            </a>
+          </h5>
+        </div>
+        <div>
+          @if (auth()->user()->is($tweet->user))
+            <form action="{{route('tweets.destroy', $tweet)}}" method="POST">
+              @csrf
+              @method('DELETE')
+              <button type="submit">
+                <i class="fas fa-trash text-red-500"></i>
+              </button>
+            </form>
+          @endif
+        </div>
+      </div>
       <p class="text-sm">
         {{ $tweet->body }}
       </p>

@@ -9,7 +9,8 @@ class FollowController extends Controller
 {
     public function store(User $user)
     {
+        $message = auth()->user()->following($user) ? 'Unfollowed' : 'Following';
         auth()->user()->toggleFollow($user);
-        return redirect()->back();
+        return redirect()->back()->with('message', $message);
     }
 }

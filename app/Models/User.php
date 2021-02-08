@@ -49,13 +49,13 @@ class User extends Authenticatable
 
     public function getAvatarAttribute($value)
     {
-        return asset($value ? 'storage/'.$value : 'images/banner.png');
+        return asset($value ? 'storage/'.$value : 'images/avatar.png');
         // return "https://i.pravatar.cc/150?u=".$this->email;
     }
 
     public function getBannerAttribute($value)
     {
-        return asset($value ? 'storage/'.$value : 'images/banner.png');
+        return asset($value ? 'storage/'.$value : 'images/banner1.jpg');
     }
 
     // public function setPasswordAttribute($value)

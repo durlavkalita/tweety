@@ -30,6 +30,13 @@ class TweetController extends Controller
             $validated['tweetImage'] = request('tweetImage')->store('tweetImages');
         }
         Tweet::create($validated);
+        $request->session()->flash('message', 'Tweet Published');
         return redirect(route('tweets.index'));
+    }
+
+    public function destroy(Tweet $tweet)
+    {
+        Tweet::where('id', $tweet->id)->delete();
+        return back();
     }
 }
