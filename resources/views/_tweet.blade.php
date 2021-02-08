@@ -19,6 +19,9 @@
       <p class="text-sm">
         {{ $tweet->body }}
       </p>
+      @if ($tweet->tweetImage != 'http://127.0.0.1:8000/')
+        <img src="{{$tweet->tweetImage}}" >
+      @endif
       <x-like-buttons :tweet="$tweet"/>
   </div>
 </div>

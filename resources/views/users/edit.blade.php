@@ -109,7 +109,7 @@
         >Banner</label>
       <div class="flex">
         <input type="file" name="banner" id="banner">
-        <img src="{{$user->avatar}}" alt="Your banner" width="40"/>
+        <img src="{{$user->banner}}" alt="Your banner" width="40"/>
       </div>
       @error('banner')
         <p class="text-red-500 text-xs mt-2">{{$message}}</p>

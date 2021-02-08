@@ -20,6 +20,7 @@ class CreateTweetsTable extends Migration
             ->onUpdate('cascade')
             ->onDelete('cascade');
             $table->string('body');
+            $table->text('tweetImage')->nullable();
             $table->timestamps();
         });
     }

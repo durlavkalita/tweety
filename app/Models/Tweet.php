@@ -11,7 +11,12 @@ class Tweet extends Model
 {
     use HasFactory;
 
-    protected $fillable = [ 'user_id', 'body' ];
+    protected $fillable = [ 'user_id', 'body', 'tweetImage' ];
+
+    public function getTweetImageAttribute($value)
+    {
+        return asset($value ? 'storage/'.$value : null);
+    }
 
     public function user()
     {

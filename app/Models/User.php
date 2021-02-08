@@ -56,7 +56,6 @@ class User extends Authenticatable
     public function getBannerAttribute($value)
     {
         return asset($value ? 'storage/'.$value : 'images/banner.png');
-        // return "https://i.pravatar.cc/150?u=".$this->email;
     }
 
     // public function setPasswordAttribute($value)

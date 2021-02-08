@@ -22,13 +22,14 @@ class TweetController extends Controller
 
     public function store(Request $request)
     {
-        $request->validate([
+        $validated = $request->validate([
             'body'=>'required|max:255'
         ]);
-        Tweet::create([
-            'user_id' => auth()->id(),
-            'body' => $request->body,
-        ]);
+        $validated['user_id'] = auth()->id();
+        if(request('tweetImage')){
+            $validated['tweetImage'] = request('tweetImage')->store('tweetImages');
+        }
+        Tweet::create($validated);
         return redirect(route('tweets.index'));
     }
 }

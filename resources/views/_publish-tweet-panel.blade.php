@@ -1,5 +1,5 @@
 <div class="border border-blue-400 rounded-lg py-4 px-4 mb-6">
-  <form action="/tweets" method="POST">
+  <form action="/tweets" method="POST" enctype="multipart/form-data">
     @csrf
       <textarea 
       name="body" 
@@ -18,10 +18,16 @@
           width="50"
           height="50"
           >
-          <button 
-          type="submit"
-          class="bg-blue-500 rounded-lg shadow py-1 px-2 text-white h-10 hover:bg-blue-900"
-          >Publish</button>
+          <div class="flex items-center">
+            <label for="tweetImage" class="mr-2 cursor-pointer" title="Add Image">
+              <input type="file" name="tweetImage" id="tweetImage" style="display: none">
+              <span><i class="far fa-image fa-2x"></i></span>
+            </label>
+            <button 
+            type="submit"
+            class="bg-blue-500 rounded-lg shadow py-1 px-2 text-white h-10 hover:bg-blue-900"
+            >Publish</button>
+          </div>
       </footer>
   </form>
   @error('body')
