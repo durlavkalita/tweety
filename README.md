@@ -1,4 +1,3 @@
-
 <h1 align="center">
   <a href="https://laravel.com/"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="200"></a>
   <br>
@@ -6,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align="center">A simple twitter clone app built using <a href="https://laravel.com" target="_blank">Laravel</a>.</h4>
+<h3 align="center">Twitter clone app. Built using <a href="https://laravel.com" target="_blank">Laravel</a>.</h3><br/>
 
 <p align="center">
 <img src="https://img.shields.io/badge/laravel-v8.0+-red.svg" alt="Laravel">
@@ -16,7 +15,7 @@
 <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
 </p>
 
-
+<h3>
 <p align="center">
   <a href="#about">About</a> •
   <a href="#Installation">Installation</a> •
@@ -26,9 +25,11 @@
   <a href="#license">License</a> •
   <a href="#todo">Todo</a>
 </p>
+</h3>
 
-
-![preview](https://raw.githubusercontent.com/durlavk98/tweety/main/public/images/preview.png)
+<div align="center">
+<img src="https://raw.githubusercontent.com/durlavk98/tweety/main/public/images/tweety.gif"/>
+</div>
 
 ## About
 Tweety is a twitter clone built using laravel 8. It uses mysql database. Tailwindcss has been used to style the web app.
@@ -44,7 +45,13 @@ $ git clone https://github.com/durlavk98/tweety
 $ cd tweety
 
 # Install dependencies
-$ npm install
+$ composer install
+
+# Copy .env.example to .env or rename it to .env
+$ cp .env.example .env
+
+# Generate application key
+$ php artisan key:generate
 
 ```
 
@@ -61,8 +68,22 @@ DB_PASSWORD=<your database password>
 ```
 Once this is complete you can start the app by-
 ```bash
+# Run the migration
+$ php artisan migrate
+
+# Install npm dependencies
+$ npm install
+$ npm run dev
+
 # Run the app
 $ php artisan serve
+```
+
+The application should start on [localhost:8000](http://127.0.0.1:8000/)
+
+To upload image, configure storage link in `filesystem.php` and run-
+```bash
+$ php artisan storage:link
 ```
 
 ## Credits
@@ -103,12 +124,12 @@ MIT
 ## Some of my other project on laravel
 
 - [websocket-vue-chat](https://github.com/durlavk98/websocket-vue-chat) - Real time chat app built usiing laravel websockets, vuejs
-- [diary](https://github.com/durlavk98/diary) - An online diary with basic CRUD appliation. Integrated with [TinyMCE](https://www.tiny.cloud/)
 
 
 ---
 
 > [@durlav](https://durlavk98.github.io/portfolio/) &nbsp;&middot;&nbsp;
-> GitHub [@durlavk98](https://github.com/durlavk98) &nbsp;&middot;&nbsp;
+> Linkedin [@durlavk98](https://linkedin.com/in/durlavk98) &nbsp;&middot;&nbsp;
+> Medium [@durlavk98](https://medium.com/@durlavk98) &nbsp;&middot;&nbsp;
 > Twitter [@durlavk98](https://twitter.com/durlavk98) &nbsp;&middot;&nbsp;
-> Linkedin [@durlavk98](https://linkedin.com/in/durlavk98)
+> GitHub [@durlavk98](https://github.com/durlavk98)

@@ -11,7 +11,7 @@
       </a>
   </div>
   <div>
-      <div class="flex">
+      <div class="flex justify-between"  style="width: 600px">
         <div>
           <h5 class="font-bold mb-4">
             <a href="{{route('users.show', $tweet->user)}}">
@@ -31,11 +31,13 @@
           @endif
         </div>
       </div>
-      <p class="text-sm">
-        {{ $tweet->body }}
-      </p>
-      @if ($tweet->tweetImage != 'http://127.0.0.1:8000/')
-        <img src="{{$tweet->tweetImage}}" >
+      <div class="flex justify-between">
+        <p class="text-sm">
+          {{ $tweet->body }}
+        </p>
+      </div>
+      @if ($tweet->tweetImage != 'http://localhost:8000/')
+        <img src="{{asset($tweet->tweetImage)}}" width="50%" class="mx-auto">
       @endif
       <x-like-buttons :tweet="$tweet"/>
   </div>
