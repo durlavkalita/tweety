@@ -128,8 +128,8 @@ MIT
 
 ---
 
-> [@durlav](https://durlavk98.github.io/portfolio/) &nbsp;&middot;&nbsp;
-> Linkedin [@durlavk98](https://linkedin.com/in/durlavk98) &nbsp;&middot;&nbsp;
-> Medium [@durlavk98](https://medium.com/@durlavk98) &nbsp;&middot;&nbsp;
+> [@durlav](https://durlavkalita.github.io/) &nbsp;&middot;&nbsp;
+> Linkedin [@durlavk98](https://linkedin.com/in/durlavkalita) &nbsp;&middot;&nbsp;
+> Medium [@durlavk98](https://durlavkalita.medium.com/) &nbsp;&middot;&nbsp;
 > Twitter [@durlavk98](https://twitter.com/durlavk98) &nbsp;&middot;&nbsp;
-> GitHub [@durlavk98](https://github.com/durlavk98)
+> GitHub [@durlavk98](https://github.com/durlavkalita)
