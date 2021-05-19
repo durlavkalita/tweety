@@ -128,8 +128,7 @@ MIT
 
 ---
 
-> [@durlav](https://durlavkalita.github.io/) &nbsp;&middot;&nbsp;
-> Linkedin [@durlavk98](https://linkedin.com/in/durlavkalita) &nbsp;&middot;&nbsp;
-> Medium [@durlavk98](https://durlavkalita.medium.com/) &nbsp;&middot;&nbsp;
-> Twitter [@durlavk98](https://twitter.com/durlavk98) &nbsp;&middot;&nbsp;
-> GitHub [@durlavk98](https://github.com/durlavkalita)
+> [@durlav](https://durlavkalita.github.io) &nbsp;&middot;&nbsp;
+> Linkedin [@durlavkalita](https://linkedin.com/in/durlavkalita)&nbsp;&middot;&nbsp;
+> Medium [@durlavkalita](https://durlavkalita.medium.com) &nbsp;&middot;&nbsp;
+> Twitter [@durlavk98](https://twitter.com/durlavk98)
